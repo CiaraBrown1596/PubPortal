@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pub Portal</string>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="default_info_snippet" />
+    <string name="default_info_title" />
+    <string name="pick_place" />
+</resources>
