@@ -8,25 +8,77 @@
     android:orientation="vertical">
     tools:context=".GoogleMapsActivity">
 
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <EditText
+            android:id="@+id/locationSearch"
+            android:layout_width="314dp"
+            android:layout_height="50dp"
+            android:textColorHint="@color/black"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:ems="10"
+            android:hint="Search for a place..." />
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"
+            android:src="@drawable/ic_search"/>
+
+
+
+    </RelativeLayout>
+
 
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/google_map"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         />
 
-    <Button
-        android:id="@+id/currentLoc"
-        android:layout_width="30sp"
-        android:layout_height="40sp"
-        android:layout_alignBottom="@id/google_map"
-        android:layout_alignEnd="@id/google_map"
-        android:layout_alignRight="@id/google_map"
-        android:layout_marginRight="30sp"
-        android:layout_marginBottom="30sp"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RelativeLayout2">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pubs_nearby"
+            android:onClick="onCLick"
+            android:layout_marginLeft="67dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_pub"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/food_nearby"
+            android:onClick="onCLick"
+            android:layout_marginLeft="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_food"/>
+
+    </RelativeLayout>
+
+
 
 </RelativeLayout>
 
